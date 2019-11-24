@@ -2,6 +2,9 @@
 
 Projeto 3 da disciplina Orientação a Objetos
 
+Nome:
+GameTag
+
 # Requisitos Mínimos do EP3
   
 1. Projeto de Aplicativo Web em Ruby on Rails
