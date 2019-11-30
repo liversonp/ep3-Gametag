@@ -12,11 +12,11 @@
   <body>
   	<% if notice %>
 	  <p class="alert alert-success"><%= notice %></p>
-	<% end %>
-	<% if alert %>
+	  <% end %>
+	  <% if alert %>
 	  <p class="alert alert-danger"><%= alert %></p>
-	<% end %>
-  <div class="container">
+	  <% end %>
+    <div class="container">
     <%= yield %>
   </div>
 
@@ -51,7 +51,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/ideas">Tags</a>
+            <a class="nav-link" href="/Tags">Tags</a>
           </li>
         </ul>
       </div>

@@ -2,7 +2,7 @@
 
 <p>
   <strong>Imagem:</strong>
-  <%= @home.imagem %>
+  <%= image_tag(@home.imagem_url, width: 150) if @home.imagem.present? %>
 </p>
 
 <p>
