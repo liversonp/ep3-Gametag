@@ -11,19 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :user_name %>
-    <%= form.text_field :user_name %>
+
+
+  <div class="form-group">
+    <div class="field">
+      <%= form.label :user_name %>
+      <%= form.text_field :user_name, class:"form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :body %>
+      <%= form.text_area :body, class:"form-control" %>
+    </div>
+
+    <%= form.hidden_field :home_id %>
+
+    <div class="actions">
+      <%= form.submit 'Comentar',class:"btn btn-secondary"%>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
-
-  <%= form.hidden_field :home_id %>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
