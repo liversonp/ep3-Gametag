@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  root to: redirect('/users/sign_in')
   resources :posts
   resources :homes
   devise_for :users
