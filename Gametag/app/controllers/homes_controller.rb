@@ -11,6 +11,8 @@ class HomesController < ApplicationController
   # GET /homes/1
   # GET /homes/1.json
   def show
+    @comments = @home.comments.all
+    @comment = @home.comments.build
   end
 
   # GET /homes/new
