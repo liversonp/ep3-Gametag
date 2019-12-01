@@ -1,19 +1,10 @@
 <p id="notice"><%= notice %></p>
-
-<p class="lead">
-  <strong>Imagem:</strong>
-  <%= image_tag(@home.imagem_url, width: 150) if @home.imagem.present? %>
-</p>
-
-<p class="lead">
-  <strong>Descricao:</strong>
-  <%= @home.descricao %>
-</p>
-
-<p class="lead">
-  <strong>Nome:</strong>
-  <%= @home.nome %>
-</p>
-
-<%= link_to 'Edit', edit_home_path(@home) %> |
-<%= link_to 'Back', homes_path %>
+<div class="card border-dark mb-3" style="width: 70rem;">
+  <h5 class="card-header"><%= @home.nome %></h5>
+  <%= image_tag(@home.imagem_url, width: 150, class:"card-img-top") if @home.imagem.present? %>
+  <div class="card-body">
+    <p class="card-text"><%= @home.descricao %></p>
+    <%= link_to 'Edit', edit_home_path(@home), :class=>"btn btn-primary" %> |
+    <%= link_to 'Back', homes_path, :class=>"btn btn-primary " %>
+  </div>
+</div>
