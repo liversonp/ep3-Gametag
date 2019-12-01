@@ -1,31 +1,34 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Tags</h1>
+<% if user_signed_in? %>
+  <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Imagem</th>
-      <th>Descrição</th>
-      <th>Nome</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <h1>Tags</h1>
 
-  <tbody>
-    <% @homes.each do |home| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= image_tag home.imagem_url, width: '150px' if home.imagem.present? %></td>
-        <td><%= home.descricao %></td>
-        <td><%= home.nome %></td>
-        <td><%= link_to 'Show', home %></td>
-        <td><%= link_to 'Edit', edit_home_path(home) %></td>
-        <td><%= link_to 'Destroy', home, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Imagem</th>
+        <th>Descrição</th>
+        <th>Nome</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @homes.each do |home| %>
+        <tr>
+          <td><%= image_tag home.imagem_url, width: '150px' if home.imagem.present? %></td>
+          <td><%= home.descricao %></td>
+          <td><%= home.nome %></td>
+          <td><%= link_to 'Show', home %></td>
+          <td><%= link_to 'Edit', edit_home_path(home) %></td>
+          <td><%= link_to 'Destroy', home, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New tag', new_home_path %>
+  <br>
+
+  <%= link_to 'New tag', new_home_path %>
+<%end%>
