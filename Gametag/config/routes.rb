@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  get "about" => "about#about"
   resources :posts
   resources :homes
   devise_for :users
