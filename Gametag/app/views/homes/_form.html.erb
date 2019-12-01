@@ -10,23 +10,25 @@
       </ul>
     </div>
   <% end %>
-
+<div class="form-group">
   <div class="field">
-    <%= form.label :imagem %>
-    <%= form.file_field :imagem %>
+    <label>Imagem</label>
+    <%= form.file_field :imagem, class:"form-control-file" %>
   </div>
 
   <div class="field">
-    <%= form.label :descricao %>
-    <%= form.text_area :descricao %>
+    <label>Nome</label>
+    <%= form.text_field :nome, class:"form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome %>
+    <label>Descrição</label>
+    <%= form.text_area :descricao, class:"form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Atualizar',class:"btn btn-secondary"%>
   </div>
+</div>
+
 <% end %>

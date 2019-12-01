@@ -4,8 +4,8 @@
 
   <h1>Tags</h1>
 
-  <table>
-    <thead>
+  <table class="table table-striped">
+    <thead class="thead-dark">
       <tr>
         <th>Imagem</th>
         <th>Descrição</th>
@@ -20,11 +20,11 @@
           <td><%= image_tag home.imagem_url, width: '150px' if home.imagem.present? %></td>
           <td><%= home.descricao %></td>
           <td><%= home.nome %></td>
-          <td><%= link_to 'Show', home %></td>
+          <td><%= link_to 'Show', home, :class=>"btn btn-primary" %></td>
 
           <% if home.user == current_user %>
-            <td><%= link_to 'Edit', edit_home_path(home) %></td>
-            <td><%= link_to 'Destroy', home, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Edit', edit_home_path(home), :class=>"btn btn-secondary" %></td>
+            <td><%= link_to 'Destroy', home, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-outline-danger" %></td>
           <% end %>
 
         </tr>
@@ -34,5 +34,7 @@
 
   <br>
 
-  <%= link_to 'New tag', new_home_path %>
+  <%= link_to 'New tag', new_home_path, :class => "btn btn-primary btn-lg" %>
+
+
 <%end%>
