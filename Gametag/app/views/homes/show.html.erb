@@ -1,16 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="lead">
   <strong>Imagem:</strong>
   <%= image_tag(@home.imagem_url, width: 150) if @home.imagem.present? %>
 </p>
 
-<p>
+<p class="lead">
   <strong>Descricao:</strong>
   <%= @home.descricao %>
 </p>
 
-<p>
+<p class="lead">
   <strong>Nome:</strong>
   <%= @home.nome %>
 </p>

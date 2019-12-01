@@ -12,35 +12,26 @@
 
   <body>
     <% if user_signed_in? %>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-          <a class="navbar-brand" href="/about">GameTag</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-           <span class="navbar-toggler-icon"></span>
-
-           <footer>
-            <div class="container">
-              GameTag <%= Time.now.year %>
-            </div>
-          </footer>
-          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-          </button>
-        </footer>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/about">GameTag</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
             <li class="nav-item active">
               <a class="nav-link" href="/homes">Tags</a>
-                <% if user_signed_in?%>
-                <%= link_to 'Account', edit_user_registration_path, :class => "nav-link"%>
-                <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => "nav-link"%>
-              <%end%>
             </li>
+
+            <% if user_signed_in?%>
+              <li class="nav-item">
+                <%= link_to 'Account', edit_user_registration_path, :class => "nav-link"%>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => "nav-link"%>
+              </li>
+            <%end%>
+
           </ul>
         </div>
       </nav>
