@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 2019_11_28_171206) do
     t.string "nome"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_homes_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|

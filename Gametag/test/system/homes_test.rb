@@ -7,7 +7,7 @@ class HomesTest < ApplicationSystemTestCase
 
   test "visiting the index" do
     visit homes_url
-    assert_selector "h1", text: "Homes"
+    assert_selector "h1", text: "Tags"
   end
 
   test "creating a Home" do
@@ -17,9 +17,9 @@ class HomesTest < ApplicationSystemTestCase
     fill_in "Descricao", with: @home.descricao
     fill_in "Imagem", with: @home.imagem
     fill_in "Nome", with: @home.nome
-    click_on "Create Home"
+    click_on "Create Tag"
 
-    assert_text "Home was successfully created"
+    assert_text "Tag was successfully created"
     click_on "Back"
   end
 
@@ -32,7 +32,7 @@ class HomesTest < ApplicationSystemTestCase
     fill_in "Nome", with: @home.nome
     click_on "Update Home"
 
-    assert_text "Home was successfully updated"
+    assert_text "Tag was successfully updated"
     click_on "Back"
   end
 
@@ -42,6 +42,6 @@ class HomesTest < ApplicationSystemTestCase
       click_on "Destroy", match: :first
     end
 
-    assert_text "Home was successfully destroyed"
+    assert_text "Tag was successfully destroyed"
   end
 end
