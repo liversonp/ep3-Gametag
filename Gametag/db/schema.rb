@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_27_022110) do
+ActiveRecord::Schema.define(version: 2019_12_01_193125) do
 
   create_table "homes", force: :cascade do |t|
     t.string "imagem"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2019_11_27_022110) do
     t.string "nome"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_homes_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|
