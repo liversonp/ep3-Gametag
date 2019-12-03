@@ -3,20 +3,18 @@
   <h5 class="card-header"><%= @home.nome %></h5>
   <%= image_tag(@home.imagem_url, width: 150, class:"card-img-top") if @home.imagem.present? %>
 
-  <%= link_to like_home_path(@home), class:"like-btn", method: :put, remote: :true do%>
-  <div>
-  Like
-  <spam><p><i class= "fa fa-thumbs-up fa-3x"></i></p></spam>
-  </div>
-  <% end %>
-
-  <spam class="likes-count"><%= @home.get_upvotes.size %> </spam>
-
-
   <div class="card-body">
     <p class="card-text"><%= @home.descricao %></p>
     <%= link_to 'Edit', edit_home_path(@home), :class=>"btn btn-primary" %> |
     <%= link_to 'Back', homes_path, :class=>"btn btn-primary " %>
+    <%= link_to like_home_path(@home), class:"like-btn", method: :put, remote: :true do%>
+    <br>
+    <br>
+    <div class="btn btn-success">
+      Like <span class="badge badge-light"><spam class="likes-count"><%= @home.get_upvotes.size %> </spam></span>
+      <spam><p><i class= "fa fa-thumbs-up fa-3x"></i></p></spam>
+    </div>
+    <% end %>
   </div>
 </div>
 
