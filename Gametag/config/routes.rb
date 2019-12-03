@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :comments
 
   get "about" => "about#about"
-  resources :posts
   resources :homes do
     member do
       put "like" => "homes#vote"
