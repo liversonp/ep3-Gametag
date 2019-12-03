@@ -24,7 +24,7 @@
 
 <% @comments.each do |comment| %>
   <div class="card text-white bg-dark mb-3" style="width: 70rem;">
-    <h5 class="card-header"><%= comment.user %></h5>
+    <h5 class="card-header"><%= @comment.user_name %></h5>
     <div class="card-body">
       <p class="card-text"><%= comment.body %></p>
       <% if comment.user == current_user %>

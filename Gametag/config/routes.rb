@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     member do
       put "like" => "homes#vote"
     end
+    resources :comments
   end
   devise_for :users
 
