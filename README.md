@@ -1,34 +1,39 @@
-# ep3
+# GAMETAG
 
-Projeto 3 da disciplina Orientação a Objetos
+## Sobre o projeto
 
-Nome:
-GameTag
+A comunidade gamer vem deixando sua marca com o decorrer das gerações, mostrando que sua influência está aumentando com os anos e assim, influenciando tanto na cultura como economia mundial. Gametag trata-se de um fórum especializado em games de todos os genêros, onde os jogadores podem se encontrar e compartilhar fatos, tutoriais, avisos sobre certos jogos e até encontrar recomendações de outros usuários. O site é baseado em um sistema de subtópicos, onde cada tópico pode ser sobre um jogo, empresa, console e dentre outras categorias.
 
-# Requisitos Mínimos do EP3
-  
-1. Projeto de Aplicativo Web em Ruby on Rails
+## Requisitos do sistema
 
-1. Incluir em sua modelagem pelo menos duas classes de dados (model) além dos usuários.
+### Gems
 
-1. A aplicação deverá gerenciar o cadastro de usuários com acesso à funções exclusivas, além das funcionalidades públicas da aplicação.
+- Devise
+- Bootstrap-sass
+- Acts as Votable
+- Remotipart
+- Rails Admin
+- Rails Admin Rollincode
+- Railroady
+- Carrierwave
 
-1. Interface com layout elaborado para além do padrão do Rails (Usando CSS, Bootstrap, Matrerial design, etc.)
+## Versões
 
-1. Descrição da solução completa no arquivo Readme.md do repositório contendo: descrição da solução com os objetivos e funcionalidades, o diagrama de classes tanto das Models quanto das Controllers, o diagrama de casos de uso da aplicação.
+- Ruby 2.6.5
+- Rails 6.0.0
 
- 
-# Requisitos para maior pontuação no trabalho
-
-1. Criar relação entre as models
-
-1. Gerência de níveis de permissão por tipo de usuário (usuário, regular, usuário admin, etc)
-
-1. Uso de outras gems, além das que já são padrão no projeto inicial do Rails.
-
-1. Relevância do tema, criatividade e refinamento na implementação.
+## Como rodar o programa
 
 
-# Entrega do EP3 consistirá de:
+    <html>
+      <head>
+        <ol>
+            <li>Clone esse repositório em seu computador</li>
+            <li>Digite yarn install --check-files no terminal dentro da pasta Gametag</li>
+            <li>Digite bundle install no terminal dentro da pasta Gametag</li>
+            <li>Digite rails db:migrate no terminal dentro da pasta Gametag</li>
+            <li>Digite rails s no terminal dentro da pasta Gametag e coloque a url entregue no navegador</li>
+        </ol> 
+      </head>
+    </html>
 
-1. Link para o repositório GIT com o código fonte da aplicação.
