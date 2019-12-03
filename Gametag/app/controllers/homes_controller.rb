@@ -1,5 +1,6 @@
 class HomesController < ApplicationController
   before_action :set_home, only: [:show, :edit, :update, :destroy, :vote]
+  before_action :authenticate_user!, only: [:vote]
   before_action :authenticate_user!, except: [:index, :show]
   respond_to :js, :json, :html
 
@@ -68,7 +69,7 @@ class HomesController < ApplicationController
   def vote
     if !current_user.liked? @home
       @home.liked_by current_user
-    
+
     elsif current_user.liked? @home
       @home.unlike_by current_user
     end
