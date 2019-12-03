@@ -73,6 +73,7 @@ class HomesController < ApplicationController
     elsif current_user.liked? @home
       @home.unlike_by current_user
     end
+    redirect_to @home
   end
   private
     # Use callbacks to share common setup or constraints between actions.
