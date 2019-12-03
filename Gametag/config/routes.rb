@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   
   get "about" => "about#about"
   resources :posts
-  resources :homes
+  resources :homes do
+    member do
+      put "like" => "homes#votes"
+    end
+  end
   devise_for :users
 
   root :to => 'homes#index'

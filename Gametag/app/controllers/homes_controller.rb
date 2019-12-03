@@ -1,6 +1,7 @@
 class HomesController < ApplicationController
-  before_action :set_home, only: [:show, :edit, :update, :destroy]
+  before_action :set_home, only: [:show, :edit, :update, :destroy, :vote]
   before_action :authenticate_user!, except: [:index, :show]
+  respond_to :js, :json, :html
 
   # GET /homes
   # GET /homes.json
@@ -59,11 +60,19 @@ class HomesController < ApplicationController
   def destroy
     @home.destroy
     respond_to do |format|
-      format.html { redirect_to homes_url, notice: 'Home was successfully destroyed.' }
+      format.html { redirect_to homes_url, notice: 'Tag was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
+  def vote
+    if !current_user.liked? @home
+      @home.liked_by current_user
+    
+    elsif current_user.liked? @home
+      @home.unlike_by current_user
+    end
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_home

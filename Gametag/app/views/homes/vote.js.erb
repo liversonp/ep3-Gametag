@@ -1,0 +1,7 @@
+<% if current_user.liked? @home %>
+    $('.like-btn').addClass('liked');
+    
+    <% else %> 
+        $('.like-btn').addClass('like-btn');
+    <%end%>
+    $('.likes-count').html("<%=@home.get_upvotes.size %>")
