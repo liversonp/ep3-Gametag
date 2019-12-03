@@ -24,13 +24,9 @@ A comunidade gamer vem deixando sua marca com o decorrer das gerações, mostran
 
 ## Como rodar o programa
 
-
-    
-        <ol>
-            <li>Clone esse repositório em seu computador</li>
-            <li>Digite yarn install --check-files no terminal dentro da pasta Gametag</li>
-            <li>Digite bundle install no terminal dentro da pasta Gametag</li>
-            <li>Digite rails db:migrate no terminal dentro da pasta Gametag</li>
-            <li>Digite rails s no terminal dentro da pasta Gametag e coloque a url entregue no navegador</li>
-        </ol> 
+    1. Clone esse repositório em seu computador
+    2. Digite yarn install --check-files no terminal dentro da pasta Gametag
+    3. Digite bundle install no terminal dentro da pasta Gametag
+    4. Digite rails db:migrate no terminal dentro da pasta Gametag
+    5. Digite rails s no terminal dentro da pasta Gametag e coloque a url entregue no navegador
      
