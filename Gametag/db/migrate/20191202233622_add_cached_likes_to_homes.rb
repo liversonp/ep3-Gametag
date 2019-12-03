@@ -15,7 +15,7 @@ class AddCachedLikesToHomes < ActiveRecord::Migration[6.0]
     add_index :homes, :cached_weighted_total
     add_index :homes, :cached_weighted_average
     # Uncomment this line to force caching of existing votes
-     Home.find_each(&:update_cached_votes)
+    # Home.find_each(&:update_cached_votes)
   end
 
   def self.down
