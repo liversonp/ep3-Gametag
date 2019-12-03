@@ -25,8 +25,7 @@ A comunidade gamer vem deixando sua marca com o decorrer das gerações, mostran
 ## Como rodar o programa
 
 
-    <html>
-      <head>
+    
         <ol>
             <li>Clone esse repositório em seu computador</li>
             <li>Digite yarn install --check-files no terminal dentro da pasta Gametag</li>
@@ -34,6 +33,4 @@ A comunidade gamer vem deixando sua marca com o decorrer das gerações, mostran
             <li>Digite rails db:migrate no terminal dentro da pasta Gametag</li>
             <li>Digite rails s no terminal dentro da pasta Gametag e coloque a url entregue no navegador</li>
         </ol> 
-      </head>
-    </html>
-
+     
