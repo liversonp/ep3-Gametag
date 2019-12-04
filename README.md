@@ -35,3 +35,7 @@ A comunidade gamer vem deixando sua marca com o decorrer das gerações, mostran
     5. Digite rails db:migrate no terminal dentro da pasta Gametag
     6. Digite rails s no terminal dentro da pasta Gametag e coloque a url entregue no navegador ou digite localhost:3000
      
+
+## Alunos
+- Liverson Paulo Furtado Severo 18/0022237
+- Matheus Afonso de Souza 18/0127641
